@@ -5,10 +5,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <button class="Add">Add Book</button>
+    <dialog class="dialog">
+  <form>
+    <label for="BookName">Book Title: </label>
+    <input id="BookName" name="BookN" type="text" />
+    <label for="BookAuthor">Book Author: </label>
+    <input id="BookAuthor" name="BookA" type="text" />
+    <label for="BookPages">Number of Pages: </label>
+    <input id="BookPages" name="BookP" type="number" />
+    <label for="IsRead">Read already? </label>
+    <input type="checkbox" name="Read" id="IsRead">
+
+    <button formmethod="dialog" type="submit">Cancel</button>
+
+
+    <button id="submitButton" type="submit">Submit</button>
+  </form>
+
+</dialog>
     <main>
-        
+
     </main>
 </body>
 </html>
