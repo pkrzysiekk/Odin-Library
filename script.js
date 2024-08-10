@@ -3,6 +3,7 @@ const main=document.querySelector("main");
 const dialog=document.querySelector(".dialog");
 const addButton=document.querySelector(".Add")
 const submitButton=document.querySelector("#submitButton");
+const cancelButton=document.querySelector("#cancelButton");
 const form=document.querySelector("form");
 let i=0;
 

@@ -23,6 +23,8 @@ button{
     display: grid;
     gap: 20px;
     border-left: 5px solid orange;
+    box-shadow: 0 8px 2px -2px gray;
+
 
 }
 main{
