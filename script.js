@@ -47,7 +47,7 @@ function clearDialog(){
   form.elements['Read'].checked=false;
 }
 
-theHobbit=new Book('The Hobbit','J.R.R. Tolkien','295',true);
+theHobbit=new Book('The Hobbit','J.R.R. Tolkien','295',false);
 for(let j=0;j<10;j++){
   myLibrary.push(theHobbit);
 }
@@ -71,7 +71,20 @@ function displayBooks(){
     myLibrary.splice(index,1);
     bookCard.remove();
     
-  })
+  });
+  if(book.isRead===false){
+    const readCheckbox=document.createElement("button");
+    readCheckbox.classList.add("read-checkbox");
+    readCheckbox.textContent="Read already! ";
+    bookCard.appendChild(readCheckbox);
+    readCheckbox.addEventListener("click",()=>{
+       index=bookCard.id;
+      bookToEdit=myLibrary[index];
+      bookToEdit.isRead=true;
+      clearMain();
+      displayBooks();
+    })
+  }
   main.appendChild(bookCard);
   
   })
